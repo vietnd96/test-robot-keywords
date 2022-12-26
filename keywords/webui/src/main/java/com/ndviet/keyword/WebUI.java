@@ -1,5 +1,6 @@
 package com.ndviet.keyword;
 
+import com.ndviet.libary.spring.SpringHelpers;
 import com.ndviet.library.BrowserManagement;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -15,6 +16,7 @@ import static com.ndviet.libary.TestObject.ObjectRepository.findTestObject;
 public class WebUI extends AnnotationLibrary {
     public WebUI() {
         super(Arrays.asList("com/ndviet/keyword/WebUI.class"));
+        SpringHelpers.getInstance().getBean("WebElementIdentifier");
     }
 
     @RobotKeyword
