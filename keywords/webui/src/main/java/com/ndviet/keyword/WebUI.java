@@ -1,15 +1,20 @@
-package com.ndviet;
+package com.ndviet.keyword;
 
+import com.ndviet.library.BrowserManagement;
+import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
 import org.robotframework.javalib.annotation.RobotKeywords;
 import org.robotframework.javalib.library.AnnotationLibrary;
 
 import java.util.Arrays;
+import java.util.Map;
+
+import static com.ndviet.libary.TestObject.ObjectRepository.findTestObject;
 
 @RobotKeywords
 public class WebUI extends AnnotationLibrary {
     public WebUI() {
-        super(Arrays.asList("com/ndviet/WebUI.class"));
+        super(Arrays.asList("com/ndviet/keyword/WebUI.class"));
     }
 
     @RobotKeyword
@@ -23,13 +28,27 @@ public class WebUI extends AnnotationLibrary {
     }
 
     @RobotKeyword
-    public void click() {
-
+    @ArgumentNames({"objectID"})
+    public void click(String objectID) throws Exception {
+        com.ndviet.library.WebUI.click(findTestObject(objectID));
     }
 
     @RobotKeyword
-    public void setText() {
+    @ArgumentNames({"objectID", "variables"})
+    public void click(String objectID, Map variables) throws Exception {
+        com.ndviet.library.WebUI.click(findTestObject(objectID, variables));
+    }
 
+    @RobotKeyword
+    @ArgumentNames({"objectID", "text"})
+    public void setText(String objectID, String text) throws Exception {
+        com.ndviet.library.WebUI.setText(findTestObject(objectID), text);
+    }
+
+    @RobotKeyword
+    @ArgumentNames({"objectID", "text", "variables"})
+    public void setText(String objectID, String text, Map variables) throws Exception {
+        com.ndviet.library.WebUI.setText(findTestObject(objectID, variables), text);
     }
 
     @RobotKeyword
