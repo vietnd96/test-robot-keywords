@@ -2,12 +2,15 @@ package com.ndviet.keyword;
 
 import com.ndviet.libary.spring.SpringHelpers;
 import com.ndviet.library.BrowserManagement;
+import org.openqa.selenium.WebElement;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
+import org.robotframework.javalib.annotation.RobotKeywordOverload;
 import org.robotframework.javalib.annotation.RobotKeywords;
 import org.robotframework.javalib.library.AnnotationLibrary;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import static com.ndviet.libary.TestObject.ObjectRepository.findTestObject;
@@ -21,41 +24,84 @@ public class WebUI extends AnnotationLibrary {
 
     @RobotKeyword
     public void openBrowser(String url) throws Exception {
-        BrowserManagement.getInstance().goToUrl(url);
+        BrowserManagement.getInstance().openBrowser(url);
     }
 
     @RobotKeyword
     public void closeBrowser() {
-        BrowserManagement.getInstance().getDriver().quit();
+        BrowserManagement.getInstance().closeBrowser();
     }
 
     @RobotKeyword
+    @ArgumentNames({"objectID", "variables="})
+    public WebElement findWebElement(String objectID, Map variables) throws Exception {
+        return com.ndviet.library.WebUI.findWebElement(findTestObject(objectID));
+    }
+
+    @RobotKeywordOverload
+    @ArgumentNames({"objectID"})
+    public WebElement findWebElement(String objectID) throws Exception {
+        return com.ndviet.library.WebUI.findWebElement(findTestObject(objectID));
+    }
+
+    @RobotKeyword
+    @ArgumentNames({"objectID", "variables="})
+    public List<WebElement> findWebElements(String objectID, Map variables) throws Exception {
+        return com.ndviet.library.WebUI.findWebElements(findTestObject(objectID, variables));
+    }
+
+    @RobotKeywordOverload
+    @ArgumentNames({"objectID"})
+    public List<WebElement> findWebElements(String objectID) throws Exception {
+        return com.ndviet.library.WebUI.findWebElements(findTestObject(objectID));
+    }
+
+    @RobotKeyword
+    @ArgumentNames({"objectID", "variables="})
+    public void click(String objectID, Map variables) throws Exception {
+        com.ndviet.library.WebUI.click(findTestObject(objectID, variables));
+    }
+
+    @RobotKeywordOverload
     @ArgumentNames({"objectID"})
     public void click(String objectID) throws Exception {
         com.ndviet.library.WebUI.click(findTestObject(objectID));
     }
 
     @RobotKeyword
-    @ArgumentNames({"objectID", "variables"})
-    public void click(String objectID, Map variables) throws Exception {
-        com.ndviet.library.WebUI.click(findTestObject(objectID, variables));
+    @ArgumentNames({"objectID", "text", "variables="})
+    public void setText(String objectID, String text, Map variables) throws Exception {
+        com.ndviet.library.WebUI.setText(findTestObject(objectID, variables), text);
     }
 
-    @RobotKeyword
+    @RobotKeywordOverload
     @ArgumentNames({"objectID", "text"})
     public void setText(String objectID, String text) throws Exception {
         com.ndviet.library.WebUI.setText(findTestObject(objectID), text);
     }
 
     @RobotKeyword
-    @ArgumentNames({"objectID", "text", "variables"})
-    public void setText(String objectID, String text, Map variables) throws Exception {
-        com.ndviet.library.WebUI.setText(findTestObject(objectID, variables), text);
+    @ArgumentNames({"objectID", "variables="})
+    public String getText(String objectID, Map variables) throws Exception {
+        return com.ndviet.library.WebUI.getText(findTestObject(objectID, variables));
+    }
+
+    @RobotKeywordOverload
+    @ArgumentNames({"objectID"})
+    public String getText(String objectID) throws Exception {
+        return com.ndviet.library.WebUI.getText(findTestObject(objectID));
     }
 
     @RobotKeyword
-    public void verifyElementPresent() {
+    @ArgumentNames({"objectID", "variables="})
+    public void verifyElementPresent(String objectID, Map variables) throws Exception {
+        com.ndviet.library.WebUI.verifyElementPresent(findTestObject(objectID, variables));
+    }
 
+    @RobotKeywordOverload
+    @ArgumentNames({"objectID"})
+    public void verifyElementPresent(String objectID) throws Exception {
+        com.ndviet.library.WebUI.verifyElementPresent(findTestObject(objectID));
     }
 
     @RobotKeyword
@@ -92,4 +138,17 @@ public class WebUI extends AnnotationLibrary {
     public void verifyElementNotVisible() {
 
     }
+
+    @RobotKeyword
+    @ArgumentNames({"objectID", "variables="})
+    public void moveToElement(String objectID, Map variables) throws Exception {
+        com.ndviet.library.WebUI.moveToElement(findTestObject(objectID, variables));
+    }
+
+    @RobotKeywordOverload
+    @ArgumentNames({"objectID"})
+    public void moveToElement(String objectID) throws Exception {
+        com.ndviet.library.WebUI.moveToElement(findTestObject(objectID));
+    }
+
 }

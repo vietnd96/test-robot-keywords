@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>webui</module>
-        <module>configuration</module>
+        <module>utilities</module>
     </modules>
 
     <properties>

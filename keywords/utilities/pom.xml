@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>robot-keywords-configuration</artifactId>
-    <name>Library Robot Keywords - Configuration</name>
+    <artifactId>robot-keywords-utilities</artifactId>
+    <name>Library Robot Keywords - Utilities</name>
 
     <dependencies>
         <dependency>
