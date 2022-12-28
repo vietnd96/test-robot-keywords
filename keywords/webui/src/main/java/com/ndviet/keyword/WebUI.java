@@ -125,8 +125,27 @@ public class WebUI extends AnnotationLibrary {
     }
 
     @RobotKeyword
-    public void verifyElementText() {
+    @ArgumentNames({"objectID", "variables", "expectValue="})
+    public void verifyElementTextEquals(String objectID, Map variables, String expectText) throws Exception {
+        com.ndviet.library.WebUI.verifyElementTextEquals(findTestObject(objectID, variables), expectText);
+    }
 
+    @RobotKeywordOverload
+    @ArgumentNames({"objectID", "expectValue="})
+    public void verifyElementTextEquals(String objectID, String expectText) throws Exception {
+        com.ndviet.library.WebUI.verifyElementTextEquals(findTestObject(objectID), expectText);
+    }
+
+    @RobotKeyword
+    @ArgumentNames({"objectID", "variables", "expectValue="})
+    public void verifyElementTextContains(String objectID, Map variables, String expectText) throws Exception {
+        com.ndviet.library.WebUI.verifyElementTextContains(findTestObject(objectID, variables), expectText);
+    }
+
+    @RobotKeywordOverload
+    @ArgumentNames({"objectID", "expectValue="})
+    public void verifyElementTextContains(String objectID, String expectText) throws Exception {
+        com.ndviet.library.WebUI.verifyElementTextContains(findTestObject(objectID), expectText);
     }
 
     @RobotKeyword
