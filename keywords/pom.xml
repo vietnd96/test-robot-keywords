@@ -3,7 +3,7 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>test-robot-keywords</artifactId>
+        <artifactId>test-java2robot-adapter</artifactId>
         <groupId>com.ndviet</groupId>
         <version>${revision}</version>
     </parent>

@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ndviet</groupId>
-    <artifactId>test-robot-keywords</artifactId>
+    <artifactId>test-java2robot-adapter</artifactId>
     <version>${revision}</version>
-    <name>Test Robot Keywords</name>
+    <name>Test Java2Robot Adapter</name>
     <packaging>pom</packaging>
     <modules>
         <module>keywords</module>
