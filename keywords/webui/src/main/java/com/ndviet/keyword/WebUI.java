@@ -2,6 +2,7 @@ package com.ndviet.keyword;
 
 import com.ndviet.libary.spring.SpringHelpers;
 import com.ndviet.library.BrowserManagement;
+import com.ndviet.library.TakeScreenshot;
 import org.openqa.selenium.WebElement;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -20,6 +21,30 @@ public class WebUI extends AnnotationLibrary {
     public WebUI() {
         super(Arrays.asList("com/ndviet/keyword/WebUI.class"));
         SpringHelpers.getInstance().getBean("WebElementIdentifier");
+    }
+
+    @RobotKeyword
+    @ArgumentNames({"fileName="})
+    public void capturePageScreenshot(String fileName) throws Exception {
+        TakeScreenshot.capturePageScreenshot(fileName);
+    }
+
+    @RobotKeywordOverload
+    @ArgumentNames({})
+    public void capturePageScreenshot() throws Exception {
+        TakeScreenshot.capturePageScreenshot(null);
+    }
+
+    @RobotKeyword
+    @ArgumentNames({"fileName="})
+    public void captureFullPageScreenshot(String fileName) throws Exception {
+        TakeScreenshot.captureFullPageScreenshot(fileName);
+    }
+
+    @RobotKeywordOverload
+    @ArgumentNames({})
+    public void captureFullPageScreenshot() throws Exception {
+        TakeScreenshot.captureFullPageScreenshot(null);
     }
 
     @RobotKeyword
