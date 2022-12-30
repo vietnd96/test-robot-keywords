@@ -93,6 +93,12 @@ public class WebUI extends AnnotationLibrary {
     }
 
     @RobotKeyword
+    @ArgumentNames({"objectID"})
+    public List<String> getTexts(String objectID) throws Exception {
+        return com.ndviet.library.WebUI.getTexts(findTestObject(objectID));
+    }
+
+    @RobotKeyword
     @ArgumentNames({"objectID", "variables="})
     public void verifyElementPresent(String objectID, Map variables) throws Exception {
         com.ndviet.library.WebUI.verifyElementPresent(findTestObject(objectID, variables));
