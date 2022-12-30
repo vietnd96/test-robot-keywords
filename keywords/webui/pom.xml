@@ -23,7 +23,7 @@
             <groupId>com.ndviet</groupId>
             <artifactId>library-webui</artifactId>
             <classifier>shaded</classifier>
-            <version>${revision}</version>
+            <version>${test-automation-fwk.revision}</version>
         </dependency>
     </dependencies>
 

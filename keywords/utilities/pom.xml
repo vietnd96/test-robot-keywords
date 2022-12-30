@@ -16,12 +16,12 @@
         <dependency>
             <groupId>com.ndviet</groupId>
             <artifactId>library-utilities</artifactId>
-            <version>${revision}</version>
+            <version>${test-automation-fwk.revision}</version>
         </dependency>
         <dependency>
             <groupId>com.ndviet</groupId>
             <artifactId>library-listeners</artifactId>
-            <version>${revision}</version>
+            <version>${test-automation-fwk.revision}</version>
         </dependency>
     </dependencies>
 
