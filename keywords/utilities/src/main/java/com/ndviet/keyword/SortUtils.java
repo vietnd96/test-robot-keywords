@@ -18,4 +18,9 @@ public class SortUtils extends AnnotationLibrary {
     public static Map sortByValues(Map input, boolean reverse) {
         return MapUtils.sortByValues(input, reverse);
     }
+
+    @RobotKeyword
+    public static Map sortByKeys(Map input, boolean reverse) {
+        return MapUtils.sortByKeys(input, reverse);
+    }
 }
