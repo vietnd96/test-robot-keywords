@@ -180,8 +180,15 @@ public class WebUI extends AnnotationLibrary {
     }
 
     @RobotKeyword
-    public void verifyElementVisible() {
+    @ArgumentNames({"objectID", "variables="})
+    public void verifyElementVisible(String objectID, Map variables) throws Exception {
+        com.ndviet.library.WebUI.verifyElementVisible(findTestObject(objectID, variables));
+    }
 
+    @RobotKeywordOverload
+    @ArgumentNames({"objectID"})
+    public void verifyElementVisible(String objectID) throws Exception {
+        com.ndviet.library.WebUI.verifyElementVisible(findTestObject(objectID));
     }
 
     @RobotKeyword
