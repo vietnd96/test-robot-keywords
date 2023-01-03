@@ -1,6 +1,6 @@
 package com.ndviet.keyword;
 
-import com.ndviet.libary.map.MapUtils;
+import com.ndviet.library.map.MapUtils;
 import org.robotframework.javalib.annotation.RobotKeyword;
 import org.robotframework.javalib.annotation.RobotKeywords;
 import org.robotframework.javalib.library.AnnotationLibrary;

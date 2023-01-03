@@ -1,6 +1,6 @@
 package com.ndviet.keyword;
 
-import com.ndviet.libary.string.StringHelpers;
+import com.ndviet.library.string.StringHelpers;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
 import org.robotframework.javalib.annotation.RobotKeywords;

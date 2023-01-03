@@ -1,10 +1,10 @@
 package com.ndviet.keyword;
 
-import com.ndviet.libary.configuration.Configuration;
-import com.ndviet.libary.configuration.ConfigurationFactory;
-import com.ndviet.libary.configuration.JsonConfiguration;
-import com.ndviet.libary.configuration.YamlConfiguration;
-import com.ndviet.libary.spring.SpringHelpers;
+import com.ndviet.library.configuration.Configuration;
+import com.ndviet.library.configuration.ConfigurationFactory;
+import com.ndviet.library.configuration.JsonConfiguration;
+import com.ndviet.library.configuration.YamlConfiguration;
+import com.ndviet.library.spring.SpringHelpers;
 import org.robotframework.javalib.annotation.RobotKeyword;
 import org.robotframework.javalib.annotation.RobotKeywords;
 import org.robotframework.javalib.library.AnnotationLibrary;

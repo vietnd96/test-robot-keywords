@@ -1,8 +1,8 @@
 package com.ndviet.keyword;
 
-import com.ndviet.libary.spring.SpringHelpers;
 import com.ndviet.library.BrowserManagement;
 import com.ndviet.library.TakeScreenshot;
+import com.ndviet.library.spring.SpringHelpers;
 import org.openqa.selenium.WebElement;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import static com.ndviet.libary.TestObject.ObjectRepository.findTestObject;
+import static com.ndviet.library.TestObject.ObjectRepository.findTestObject;
 
 @RobotKeywords
 public class WebUI extends AnnotationLibrary {
