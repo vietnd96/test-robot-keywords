@@ -11,4 +11,4 @@ Implementation for Test Libraries written in Java can be used in Robot Framework
 
 A sample project is using these Robot Keywords.<br>
 
-* [fs-test-automation](https://github.com/vietnd96/fs-test-automation)
+* [test-automation-project](https://github.com/vietnd96/test-automation-project)
